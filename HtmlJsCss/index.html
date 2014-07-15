@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>iPhone Recent Contacts</title>
+        <link href="style.css" rel="stylesheet"/>
+        <script src="//code.jquery.com/jquery-1.11.0.js" type="text/javascript"></script>
+        <script src="mustache.js" type="text/javascript"></script>
+        <script src="code.js" type="text/javascript"></script>
+        <script type="text/template" id="templateRecentContact">
+            <div class="recentContactTemplate animated">
+                <img class="recentContactDeleteIcon animated" src="remove.png"/>
+                <div class="recentContactName animated">{{name}}</div>
+                <div class="recentContactPhoneType animated">{{phoneType}}</div>
+                <div class="recentContactWhen animated">{{when}}</div>
+                <img class="recentContactDetailsPageIcon animated" src="arrow_right_blue_round.png"/>
+            </div>
+        </script>
+        <script type="text/javascript">
+            "use strict";
+            
+            var recentContacts = [
+                {
+                      "name": "Doina <3 Maerean"
+                    , "when": new Date(2014,6,14,18,52)
+                    , "phoneType": "main"
+                    , "callCount": 3
+                }
+                , {
+                      "name": "Doina <3 Maerean"
+                    , "when": new Date(2014,6,12,19,11)
+                    , "phoneType": "main"
+                    , "callCount": 3
+                }
+                , {
+                      "name": "Mihaela Savu"
+                    , "when": new Date(2014,6,12,18,18)
+                    , "phoneType": "main"
+                    , "callCount": 2
+                }
+            ];
+        </script>
+    </head>
+    <body>
+        <div class="UIPage"><div class="UIToolbar"></div><div class="UIList recentContactsList"></div></div>
+    </body>
+</html>

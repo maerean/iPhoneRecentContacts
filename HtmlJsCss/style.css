@@ -1,0 +1,52 @@
+
+.UIPage {
+    overflow: hidden;
+    width: 480px;
+    height: 640px;
+}
+
+.UIToolbar {
+    
+}
+
+.UIList {
+    
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 9pt;
+    color: #111;
+}
+
+.recentContactDeleteIcon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.recentContactName {
+    position: absolute;
+}
+
+.recentContactPhoneType {
+    
+}
+
+.recentContactWhen {
+    
+}
+
+.recentContactDetailsPageIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.recentContactTemplate {
+    display: block;
+    border: solid 1px #eee;
+}
+
+.animated {
+    transition: all 0.5s;
+}
