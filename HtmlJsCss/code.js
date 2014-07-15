@@ -6,6 +6,11 @@ $(document).ready( function() {
     templateRecentContact = $("#templateRecentContact").html();
     
     createDOMForListOfRecentContacts(recentContacts, $(".recentContactsList")[0]);
+    
+    $(".checkboxEditMode").click( function () {
+        $(".recentContactsList").toggleClass("editModeEnabled");
+        $(".aboutToBeDeleted").removeClass("aboutToBeDeleted");
+    });
 } );
 
 function createDOMForRecentContact(recentContact) {

@@ -6,11 +6,38 @@
 }
 
 .UIToolbar {
-    
+    display: block;
+    height: 32px;
+    /* fallback */
+    background-color: #b0bbbf;
+
+    /* Safari 4-5, Chrome 1-9 */
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#b0bbbf), to(#6c87a4));
+
+    /* Safari 5.1, Chrome 10+ */
+    background: -webkit-linear-gradient(top, #b0bbbf, #6c87a4);
+
+    /* Firefox 3.6+ */
+    background: -moz-linear-gradient(top, #b0bbbf, #6c87a4);
+
+    /* IE 10 */
+    background: -ms-linear-gradient(top, #b0bbbf, #6c87a4);
+
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(top, #b0bbbf, #6c87a4);
 }
 
 .UIList {
-    
+    overflow: hidden;
+    height: 608px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.border {
+    border: solid 1px #eee;
 }
 
 body {
@@ -22,29 +49,81 @@ body {
 .recentContactDeleteIcon {
     width: 16px;
     height: 16px;
-    display: inline-block;
+    position: absolute;
+    left: -16px;
+    top: 8px;
+}
+
+.UIList.editModeEnabled .recentContactTemplate:not(.aboutToBeDeleted) .recentContactDeleteIcon {
+    -webkit-transform: translateX(21px);
+}
+
+.aboutToBeDeleted .recentContactDeleteIcon {
+    -webkit-transform: translateX(21px) rotateZ(-90deg);
 }
 
 .recentContactName {
     position: absolute;
+    left: 4px;
+    top: 0px;
+}
+
+.UIList.editModeEnabled .recentContactName {
+    -webkit-transform: translateX(21px);
 }
 
 .recentContactPhoneType {
-    
+    position: absolute;
+    left: 4px;
+    top: 16px;
+    color: #888;
+}
+
+.UIList.editModeEnabled .recentContactPhoneType {
+    -webkit-transform: translateX(21px);
 }
 
 .recentContactWhen {
-    
+    position: absolute;
+    right: 32px;
+    top: 8px;
+    top: 8px;
+}
+
+.UIList.editModeEnabled .recentContactWhen {
+    -webkit-transform: translateX(21px);
 }
 
 .recentContactDetailsPageIcon {
+    position: absolute;
+    right: 4px;
+    top: 8px;
+    
     width: 16px;
     height: 16px;
 }
 
+.UIList.editModeEnabled .recentContactDetailsPageIcon {
+    -webkit-transform: translateX(21px);
+}
+
+.recentContactDeleteButton {
+    position: absolute;
+    width: 62px;
+    right: -64px;
+    top:  6px;
+    background-color: #e00;
+    color: #eee;
+}
+
+.recentContactTemplate.aboutToBeDeleted .recentContactDeleteButton {
+    -webkit-transform: translateX(-73px);
+}
+
 .recentContactTemplate {
     display: block;
-    border: solid 1px #eee;
+    position: relative;
+    height: 32px;
 }
 
 .animated {
