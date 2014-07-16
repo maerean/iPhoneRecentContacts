@@ -27,6 +27,10 @@ function createDOMForListOfRecentContacts(list, parentNode) {
 }
 
 function toggleClassAboutToBeDeleted(deleteIcon) {
+    // if other rows have already been changed to display the delete button, undo it.
+    if ( ! $(deleteIcon.parentNode).hasClass("aboutToBeDeleted") )
+        $(".aboutToBeDeleted").removeClass("aboutToBeDeleted");
+
     $(deleteIcon.parentNode).toggleClass('aboutToBeDeleted');
 }
 
