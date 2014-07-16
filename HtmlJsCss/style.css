@@ -81,6 +81,10 @@ body {
     transform: translateX(21px);
 }
 
+.aboutToBeDeleted .recentContactName {
+    color: #e00;
+}
+
 .recentContactPhoneType {
     position: absolute;
     left: 4px;
