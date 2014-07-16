@@ -1,5 +1,6 @@
 "use strict";
 
+var animationDurationMilliseconds = 500;
 var templateRecentContact;
 
 $(document).ready( function() {
@@ -20,6 +21,16 @@ function createDOMForRecentContact(recentContact) {
 function createDOMForListOfRecentContacts(list, parentNode) {
     $.each(list, function (index, recentContact) {
         var html = createDOMForRecentContact(recentContact);
-        $(parentNode).append( $(html) );
+        var dom = $(html);
+        $(parentNode).append( dom );
     });
+}
+
+function toggleClassAboutToBeDeleted(deleteIcon) {
+    $(deleteIcon.parentNode).toggleClass('aboutToBeDeleted');
+}
+
+function deleteRecentContact(div) {
+    $(div).addClass("animateDeletion");
+    setTimeout( function () { $(div).remove(); }, animationDurationMilliseconds);
 }

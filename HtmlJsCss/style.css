@@ -44,6 +44,7 @@ body {
     font-family: sans-serif;
     font-size: 9pt;
     color: #111;
+    padding: 10em;
 }
 
 .recentContactDeleteIcon {
@@ -124,6 +125,11 @@ body {
     display: block;
     position: relative;
     height: 32px;
+    overflow: hidden;
+}
+
+.animateDeletion {
+    height: 0px;
 }
 
 .animated {
