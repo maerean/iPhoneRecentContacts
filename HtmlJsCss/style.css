@@ -25,6 +25,8 @@
 
     /* Opera 11.10+ */
     background: -o-linear-gradient(top, #b0bbbf, #6c87a4);
+
+    background: linear-gradient(top, #b0bbbf, #6c87a4);
 }
 
 .UIList {
@@ -57,10 +59,14 @@ body {
 
 .UIList.editModeEnabled .recentContactTemplate:not(.aboutToBeDeleted) .recentContactDeleteIcon {
     -webkit-transform: translateX(21px);
+    -moz-transform: translateX(21px);
+    transform: translateX(21px);
 }
 
 .aboutToBeDeleted .recentContactDeleteIcon {
     -webkit-transform: translateX(21px) rotateZ(-90deg);
+    -moz-transform: translateX(21px) rotateZ(-90deg);
+    transform: translateX(21px) rotateZ(-90deg);
 }
 
 .recentContactName {
@@ -71,6 +77,8 @@ body {
 
 .UIList.editModeEnabled .recentContactName {
     -webkit-transform: translateX(21px);
+    -moz-transform: translateX(21px);
+    transform: translateX(21px);
 }
 
 .recentContactPhoneType {
@@ -82,6 +90,8 @@ body {
 
 .UIList.editModeEnabled .recentContactPhoneType {
     -webkit-transform: translateX(21px);
+    -moz-transform: translateX(21px);
+    transform: translateX(21px);
 }
 
 .recentContactWhen {
@@ -93,6 +103,8 @@ body {
 
 .UIList.editModeEnabled .recentContactWhen {
     -webkit-transform: translateX(21px);
+    -moz-transform: translateX(21px);
+    transform: translateX(21px);
 }
 
 .recentContactDetailsPageIcon {
@@ -106,6 +118,8 @@ body {
 
 .UIList.editModeEnabled .recentContactDetailsPageIcon {
     -webkit-transform: translateX(21px);
+    -moz-transform: translateX(21px);
+    transform: translateX(21px);
 }
 
 .recentContactDeleteButton {
@@ -119,6 +133,8 @@ body {
 
 .recentContactTemplate.aboutToBeDeleted .recentContactDeleteButton {
     -webkit-transform: translateX(-73px);
+    -moz-transform: translateX(-73px);
+    transform: translateX(-73px);
 }
 
 .recentContactTemplate {
