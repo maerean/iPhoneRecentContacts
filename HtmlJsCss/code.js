@@ -8,7 +8,7 @@ $(document).ready( function() {
     
     createDOMForListOfRecentContacts(recentContacts, $(".recentContactsList")[0]);
     
-    $(".checkboxEditMode").click( function () {
+    $(".checkboxEditMode").removeAttr("checked").click( function () {
         $(".recentContactsList").toggleClass("editModeEnabled");
         $(".aboutToBeDeleted").removeClass("aboutToBeDeleted");
     });
